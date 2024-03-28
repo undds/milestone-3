@@ -7,7 +7,7 @@ import React, { useState, useEffect } from 'react';
 import LoginForm from '../login-form';
 
 export default function TopNav() {
-  const [isSignedIn, setIsSignedIn] = useState<boolean | null>(null);
+  const [isSignedIn, setIsSignedIn] = useState<boolean | null>(false);
 
   return (
     <div className="flex h-full flex-row md:px-2">
@@ -24,14 +24,14 @@ export default function TopNav() {
         <div className="hidden h-auto w-full grow rounded-md md:block"></div>
           <a 
           href = "/profile"
-          className="flex h-full grow items-center justify-center gap-2 rounded-md p-3 text-white text-sm font-medium hover:bg-red-900 hover:text-white md:flex-none md:justify-start md:p-2 md:px-3">
+          className="flex h-full grow items-center justify-center gap-2 rounded-md p-3 text-white text-sm font-medium hover:bg-stone-900 hover:text-white md:flex-none md:justify-start md:p-2 md:px-3">
             <p className="hidden md:block">Profile</p>
           </a>
         {isSignedIn === true ? (
           <form>
             <Link href="/">
               <button 
-              className="flex w-full grow items-center justify-center rounded-md p-3 text-white text-sm font-medium hover:bg-red-900 hover:text-white md:flex-none md:justify-start md:p-2 md:px-3">
+              className="flex h-full grow items-center justify-center gap-2 rounded-md p-3 text-white text-sm font-medium hover:bg-stone-900 hover:text-white md:flex-none md:justify-start md:p-2 md:px-3">
                 <PowerIcon className="w-6" />
                 <div className="hidden md:block">Sign Out</div>
               </button>
@@ -41,7 +41,7 @@ export default function TopNav() {
           <form>
           <Link href="/login">
             <button 
-            className="flex w-full grow items-center justify-center rounded-md p-3 text-white text-sm font-medium hover:bg-red-900 hover:text-white md:flex-none md:justify-start md:p-2 md:px-3">
+            className="flex h-full grow items-center justify-center gap-2 rounded-md p-3 text-white text-sm font-medium hover:bg-stone-900 hover:text-white md:flex-none md:justify-start md:p-2 md:px-3">
               <PowerIcon className="w-6" />
               <div className="hidden md:block">Sign In</div>
             </button>

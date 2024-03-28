@@ -15,13 +15,13 @@ export default function Page() {
       <div className="mt-4 flex grow flex-col gap-4 md:flex-row">
         <div className="flex flex-col justify-center gap-6 rounded-lg px-6 py-10 md:w-2/5 md:px-20">
           <p className={`${lusitana.className} antialiased text-xl text-gray-800 md:text-3xl md:leading-normal`}>
-            <strong className="text-red-600">Welcome to Test Name.</strong>
+            <strong className="text-stone-900">Welcome to Sustainabrew.</strong>
           </p>
           <Link
             href="/login"
-            className="flex items-center gap-5 self-start px-6 py-3 text-sm font-medium text-white transition-colors md:text-base"
+            className="flex items-center gap-5 self-start px-6 py-3 text-sm font-lg text-stone-1000 border-[2px] border-stone-900 rounded-lg transition-colors md:text-base"
           >
-            <span>Log in</span> <ArrowRightIcon className="w-5 md:w-6" />
+            <span>Get started</span> <ArrowRightIcon className="w-5 md:w-6" />
           </Link>
         </div>
         <div className="flex items-center justify-center p-6 md:w-3/5 md:px-28 md:py-12">
@@ -30,14 +30,14 @@ export default function Page() {
             src='/hero-desktop.png'
             width={1000}
             height={700}
-            className='hidden md:block'
+            className='hidden md:block rounded-lg'
             alt='Screenshots of the dashboard project showing desktop version'
           />
           <Image
-            src='/hero-mobile.png'
+            src='/hero-desktop.png'
             width={500}
             height={620}
-            className='block md:hidden'
+            className='block md:hidden rounded-lg'
             alt='Screenshot of the dashboard project showing mobile version'
           />
         </div>
